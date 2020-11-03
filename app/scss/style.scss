@@ -1,0 +1,209 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+body {
+    background-color: blanchedalmond;
+}
+
+.wrapper {
+    max-width: 1170px;
+    font-family: 'Myriad Pro';
+    margin: 150px auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 91px;
+    background-color: #fff;
+    margin: 0 40px;
+    padding: 20px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 17px rgba(0, 0, 0, .08), 0 2px 17px rgba(0, 0, 0, .12);
+}
+
+input:focus {
+    outline: 0;
+}
+
+input[type='text']::placeholder {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+.title {
+    color: #232323;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    text-align: left;
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+}
+
+
+.form__input {
+    border: 0;
+    margin-top: 10px;
+}
+
+.form__search-wrapp {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: $orange;
+    font-size: 18px;
+}
+
+.input--search {
+    width: 192px;
+    padding: 3px;
+}
+
+.form__date {
+    display: flex;
+    position: relative;
+    padding: 0 25px;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 25px;
+        width: 1.5px;
+        background: #e4e4e4;
+        border: 1px solid #e4e4e4;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+
+        content: "";
+        display: inline-block;
+        height: 25px;
+        width: 1.5px;
+        background: #e4e4e4;
+        border: 1px solid #e4e4e4;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+
+    }
+
+
+}
+
+#datepicker--in,
+#datepicker--out {
+    display: flex;
+    align-items: center;
+}
+
+.form__input--date {
+    text-align: left;
+}
+
+.form__input--date::placeholder {
+    color: #383838;
+}
+
+.form__date-icon {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #8b9198;
+    margin-right: 20px;
+}
+
+.form__quantity {
+    display: flex;
+}
+
+.form__quantity-item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+        padding: 0 30px;
+    }
+}
+
+.quantity {
+    // display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.quantity input {
+    display: block;
+    background-color: transparent;
+    color: #8b9198;
+    width: 30px;
+    height: 27px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #8b9198;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.quantity-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity-up {
+    padding-bottom: 10px;
+}
+
+
+.form__btn {
+    width: 175px;
+    height: 63px;
+    background-color: $orange;
+    font-family: 'Proxima Nova Bold';
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.form__btn--plus {
+    width: 35px;
+    height: 35px;
+    background-color: $orange;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@import "media";
